@@ -7,6 +7,7 @@ import Tabs from 'react-bootstrap/Tabs';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
+import Button from 'react-bootstrap/Button';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Table from 'react-bootstrap/Table';
 
@@ -325,6 +326,10 @@ function Main(){
         </tr>
       </tbody>
     </Table>
+      </Tab>
+
+      <Tab eventKey="초기화" title="초기화">
+        <Button onClick={()=>{localStorage.clear()}}>초기화</Button>
       </Tab>
     </Tabs>
 
