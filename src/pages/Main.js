@@ -54,6 +54,12 @@ function Main(){
 
     function handleIncomeSubmit(e){
         e.preventDefault();
+
+        if (income <= 0) {
+          alert("수입은 0보다 커야 합니다.");
+          return;
+      }
+
         const newBalance = balance + (+income);
 
         const transaction = {
@@ -77,7 +83,13 @@ function Main(){
 
     function handleExpenseSubmit(e){
       e.preventDefault();
+
+      if (income <= 0) {
+        alert("0보다 작은 값을 지출할 수 없습니다.");
+        return;
+    }
       const newBalance = balance - (+expense);
+
 
       const transaction = {
         id: Date.now(), // 고유한 ID 생성 (현재 시간 사용)
